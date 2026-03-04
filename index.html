@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Шаурма раннер</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Подключаем PixiJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js"></script>
+    <!-- Telegram Web App SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div id="ui">
+        <div id="stats">
+            <span>🏃 <span id="distance">0</span>м</span>
+            <span>⚡ <span id="stamina">100</span>%</span>
+            <span>⭐ <span id="skill-points">0</span></span>
+        </div>
+        <div id="upgrade-menu" class="hidden">
+            <h2>Киоск с шаурмой!</h2>
+            <p>Выбери улучшение:</p>
+            <button id="upgrade-stamina">❤️ Запас стамины +10</button>
+            <button id="upgrade-speed">⚡ Скорость +0.5</button>
+            <button id="upgrade-regen">🔄 Регенерация +0.2</button>
+        </div>
+    </div>
+
+    <!-- Кнопка сброса прогресса -->
+    <button id="reset-btn" class="reset-btn">🗑️ Сброс</button>
+
+    <!-- Контейнер для canvas -->
+    <div id="game-container"></div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
