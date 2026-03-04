@@ -101,7 +101,7 @@ function setState(newState) {
     gameState.state = newState;
 
     // Константа отступа от нижнего края
-    const BOTTOM_OFFSET = 400;
+    const BOTTOM_OFFSET = 500;
 
     switch (newState) {
         case State.IDLE:
@@ -432,7 +432,7 @@ async function initGame() {
         bg3.y = app.screen.height - bg3.height;
 
         // Корректировка позиции персонажа
-        const BOTTOM_OFFSET = 400;
+        const BOTTOM_OFFSET = 500;
         if (playerSprite) {
             playerSprite.x = app.screen.width / 2;
             playerSprite.y = app.screen.height - BOTTOM_OFFSET;
