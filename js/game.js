@@ -301,14 +301,16 @@ async function initGame() {
     document.getElementById('game-container').appendChild(app.view);
 
     // Загрузка ресурсов с алиасами
+    // Используем абсолютные пути для Telegram Web App
+    const basepath = window.location.origin + '/';
     const assets = await PIXI.Assets.load([
-        { alias: 'bg', src: 'assets/bg.jpg' },
-        { alias: 'idle', src: 'assets/idle.png' },
-        { alias: 'sit', src: 'assets/sit.png' },
-        { alias: 'run1', src: 'assets/run1.png' },
-        { alias: 'run2', src: 'assets/run2.png' },
-        { alias: 'eat', src: 'assets/eat.png' },
-        { alias: 'kiosk', src: 'assets/kiosk.png' }
+        { alias: 'bg', src: basepath + 'assets/bg.jpg' },
+        { alias: 'idle', src: basepath + 'assets/idle.png' },
+        { alias: 'sit', src: basepath + 'assets/sit.png' },
+        { alias: 'run1', src: basepath + 'assets/run1.png' },
+        { alias: 'run2', src: basepath + 'assets/run2.png' },
+        { alias: 'eat', src: basepath + 'assets/eat.png' },
+        { alias: 'kiosk', src: basepath + 'assets/kiosk.png' }
     ]);
 
     // Создаём фон с масштабированием
